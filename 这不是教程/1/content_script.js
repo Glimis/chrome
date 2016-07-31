@@ -1,12 +1,15 @@
 ﻿/**
- * 抓取数据映射至插件上数据而后丢之另一个页面-。-
- * 
+ * 浏览器页面下的额外脚本
+ * 该脚本可以直接操作浏览的dom
+ * 可以通过chrome的消息机制,与插件进行交互
  */
-//使用ko框架,此处通过顺序的方式获取录入单元
 var map=['number','name','onhand','taxrate'];
+
+//监听插件发送过来的消息
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if(request.get){
+        //某东下的页面逻辑
         sendResponse({
           "price": $('#jd-price').text(),
           "number":$('#short-share span:eq(1)').text(),
@@ -16,6 +19,7 @@ chrome.runtime.onMessage.addListener(
           "detail3":$('#product-detail-5').text()
         })
     }else{
+      //本公司的页面逻辑
       var data=request.data;
       var inputs=$('iframe').contents().find('.form-group input');
       //数据补充
