@@ -7,7 +7,7 @@ function getTotal(cb){
       },
       data:{
         os_username:'liuchyg',
-        os_password:'yy4115021991',
+        os_password:'mqdqxygyqyklklsys24678',
         os_destination:'/browse/YC-530?filter=-1&jql=assignee%20in%20(currentUser())%20ORDER%20BY%20updatedDate%20ASC',
         user_role:'',
         atl_token:'',
@@ -30,7 +30,6 @@ function getTotal(cb){
            cb(data);
         })
     })
-
 }
 
 

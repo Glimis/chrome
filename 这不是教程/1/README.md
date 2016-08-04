@@ -14,5 +14,7 @@ leader认为我们可以去某东上人肉录入 〒_〒
 我决定,整个chrome插件    
 ## 最终效果
 在某东详情页面下点击读取    
-在我们公司录入的界面下点击注入      
+在我们公司录入的界面下点击注入
+
+## 效果图      
 ![image](https://github.com/Glimis/chrome/raw/master/img/xg1.png)    
